@@ -1,14 +1,24 @@
 import React from 'react';
+import './Country.css'
+
+const handleCountry = () => {
+    console.log("Btn clicked")
+}
 
 const Country = ({ country }) => {
-    console.log(country)
+    // console.log(country)
     return (
-        <div className='universal'>
-            <img src={country.flags.flags.png} alt={country.flags.flags.alt} />
-            <h3>Name: {country.name.common}</h3>
+        <div className='country'>
+            <img src={country.flags.flags.png} alt={country.flags.flags.alt} 
+            className='flag'/>
+            <h2>Name: {country.name.common}</h2>
             <h4>Capital: {country.capital.capital[0]}</h4>
             <h4>Region: {country.region.region}</h4>
             <h4>Population: {country.population.population}</h4>
+            <h4>Area: {country.area.area}
+                {country.area.area > 300000 ? " (Big Country)" : " (Small Country)"}
+            </h4>
+            <button className='button' onClick={handleCountry}>Not Visited</button>
         </div>
     );
 };

@@ -1,0 +1,16 @@
+.country {
+    border: 2px solid rgb(13, 177, 150);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.button{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.flag{
+    height: 190px;
+    width:100%
+}
