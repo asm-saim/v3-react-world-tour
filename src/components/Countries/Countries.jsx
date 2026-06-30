@@ -1,6 +1,6 @@
 import React from 'react';
 import { use } from 'react';
-import Country from '../Country';
+import Country from '../Country/Country';
 
 const Countries = ({ countries }) => {
     const countriesData = use(countries)
