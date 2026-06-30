@@ -8,6 +8,9 @@
 .button{
     padding: 10px;
     border-radius: 10px;
+    margin-right: 30px;
+    border: none;
+    background-color: rgba(10, 155, 155, 0.315);    
 }
 
 .flag{
@@ -17,4 +20,8 @@
 
 .visited-bg{
     background-color: rgba(8, 163, 163, 0.171);
+}
+
+h4{
+    margin: 10px;
 }

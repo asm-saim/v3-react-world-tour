@@ -3,3 +3,16 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
+
+.flag-mini img{
+    height: 50px;
+    width: 70px;
+    margin: 10px;
+    
+}
+
+h1{
+    text-align: center;
+    color: rgba(6, 204, 204, 0.966);
+    
+}

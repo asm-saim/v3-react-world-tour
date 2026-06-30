@@ -3,7 +3,7 @@ import './Country.css'
 import { useState } from 'react';
 
 
-const Country = ({ country, handleVisitedCountry }) => {
+const Country = ({ country, handleVisitedCountry, handleVisitedFlag }) => {
     // console.log(handleVisitedCountry)
 
     const [visited, setVisit] = useState(false)
@@ -24,9 +24,19 @@ const Country = ({ country, handleVisitedCountry }) => {
         setVisit(!visited)
 
         //function from countries:
-        handleVisitedCountry()
+        handleVisitedCountry(country)
     }
     // console.log(country)
+
+    //flag:
+    const [flag, setFlag] = useState(false)
+
+    const handleFlagLink = () => {
+        setFlag(!flag)
+
+        handleVisitedFlag(country)
+    }
+
     return (
         <div className={`country ${visited && 'visited-bg'}`}>
             <img src={country.flags.flags.png} alt={country.flags.flags.alt}
@@ -41,6 +51,8 @@ const Country = ({ country, handleVisitedCountry }) => {
             <button className='button' onClick={handleVisit}>
                 {visited ? "Visited" : "Not Visited"}
             </button>
+
+            <button className='button' onClick={handleFlagLink}>{flag ? "Flag Added" : "Flag Not Added"}</button>
         </div>
     );
 };
