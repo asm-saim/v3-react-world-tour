@@ -14,3 +14,7 @@
     height: 190px;
     width:100%
 }
+
+.visited-bg{
+    background-color: rgba(8, 163, 163, 0.171);
+}

@@ -9,3 +9,6 @@ onClick={handleCountry()}	    ❌ Calls it immediately during render.
 onClick={() => handleCountry()}	✅ Passes an anonymous function that calls handleCountry on click. Use this when you need arguments or extra logic.
 --------------------------------------------------|
 
+##state jekane declare kore, event handler o okane declare korbo.
+##Normally, react is uni directional. top->bottom 
+

@@ -3,7 +3,8 @@ import './Country.css'
 import { useState } from 'react';
 
 
-const Country = ({ country }) => {
+const Country = ({ country, handleVisitedCountry }) => {
+    // console.log(handleVisitedCountry)
 
     const [visited, setVisit] = useState(false)
 
@@ -21,10 +22,13 @@ const Country = ({ country }) => {
 
         //rule:3
         setVisit(!visited)
+
+        //function from countries:
+        handleVisitedCountry()
     }
     // console.log(country)
     return (
-        <div className='country'>
+        <div className={`country ${visited && 'visited-bg'}`}>
             <img src={country.flags.flags.png} alt={country.flags.flags.alt}
                 className='flag' />
             <h2>Name: {country.name.common}</h2>
